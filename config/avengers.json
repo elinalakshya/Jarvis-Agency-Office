@@ -1,0 +1,196 @@
+{
+  "_comment": "Avengers Registry Configuration - Production Environment",
+  "_version": "1.0.0",
+  "_description": "Registry of 19 Avengers with operational metadata. Status: active/inactive determines deployment eligibility.",
+  "avengers": [
+    {
+      "id": "PEPPER_POTTS",
+      "name": "Pepper Potts",
+      "status": "active",
+      "repo_path": "/opt/avengers/pepper-potts",
+      "api_key_env": "AVENGER_PEPPER_POTTS_API_KEY",
+      "income_ytd": 12500000,
+      "last_run": "2024-12-15T08:30:00Z",
+      "connector_module": "pepper_potts",
+      "connector_function": "execute"
+    },
+    {
+      "id": "CAP",
+      "name": "Steve Rogers",
+      "status": "active",
+      "repo_path": "D:\\business\\AI\\Github\\youtube-automation-agent-master",
+      "api_key_env": "AVENGER_CAP_API_KEY",
+      "income_ytd": 8900000,
+      "last_run": "2024-12-15T07:45:00Z",
+      "connector_module": "cap",
+      "connector_function": "execute"
+    },
+    {
+      "id": "HAPPY",
+      "name": "Happy Hogan",
+      "status": "active",
+      "repo_path": "/opt/avengers/happy-hogan",
+      "api_key_env": "AVENGER_HAPPY_API_KEY",
+      "income_ytd": 3200000,
+      "last_run": "2024-12-15T09:15:00Z",
+      "connector_module": "happy",
+      "connector_function": "execute"
+    },
+    {
+      "id": "IRON_MAN",
+      "name": "Tony Stark",
+      "status": "active",
+      "repo_path": "/opt/avengers/iron-man",
+      "api_key_env": "AVENGER_IRON_MAN_API_KEY",
+      "income_ytd": 45000000,
+      "last_run": "2024-12-15T06:00:00Z",
+      "connector_module": "iron_man",
+      "connector_function": "execute"
+    },
+    {
+      "id": "THOR",
+      "name": "Thor Odinson",
+      "status": "active",
+      "repo_path": "/opt/avengers/thor",
+      "api_key_env": "AVENGER_THOR_API_KEY",
+      "income_ytd": 28000000,
+      "last_run": "2024-12-15T05:30:00Z",
+      "connector_module": "thor",
+      "connector_function": "execute"
+    },
+    {
+      "id": "DOCTOR_STRANGE",
+      "name": "Stephen Strange",
+      "status": "active",
+      "repo_path": "/opt/avengers/doctor-strange",
+      "api_key_env": "AVENGER_DOCTOR_STRANGE_API_KEY",
+      "income_ytd": 15000000,
+      "last_run": "2024-12-15T10:00:00Z",
+      "connector_module": "doctor_strange",
+      "connector_function": "execute"
+    },
+    {
+      "id": "HAWK_EYE",
+      "name": "Clint Barton",
+      "status": "active",
+      "repo_path": "/opt/avengers/hawkeye",
+      "api_key_env": "AVENGER_HAWK_EYE_API_KEY",
+      "income_ytd": 6500000,
+      "last_run": "2024-12-15T08:00:00Z",
+      "connector_module": "hawk_eye",
+      "connector_function": "execute"
+    },
+    {
+      "id": "SPIDER_MAN",
+      "name": "Peter Parker",
+      "status": "active",
+      "repo_path": "/opt/avengers/spider-man",
+      "api_key_env": "AVENGER_SPIDER_MAN_API_KEY",
+      "income_ytd": 4200000,
+      "last_run": "2024-12-15T11:30:00Z",
+      "connector_module": "spider_man",
+      "connector_function": "execute"
+    },
+    {
+      "id": "BLACK_PANTHER",
+      "name": "T'Challa",
+      "status": "active",
+      "repo_path": "/opt/avengers/black-panther",
+      "api_key_env": "AVENGER_BLACK_PANTHER_API_KEY",
+      "income_ytd": 35000000,
+      "last_run": "2024-12-15T07:00:00Z",
+      "connector_module": "black_panther",
+      "connector_function": "execute"
+    },
+    {
+      "id": "ANT_MAN",
+      "name": "Scott Lang",
+      "status": "inactive",
+      "repo_path": "/opt/avengers/ant-man",
+      "api_key_env": "AVENGER_ANT_MAN_API_KEY",
+      "income_ytd": 5800000,
+      "last_run": "2024-11-20T14:00:00Z"
+    },
+    {
+      "id": "WASP",
+      "name": "Hope van Dyne",
+      "status": "inactive",
+      "repo_path": "/opt/avengers/wasp",
+      "api_key_env": "AVENGER_WASP_API_KEY",
+      "income_ytd": 6200000,
+      "last_run": "2024-11-20T14:30:00Z"
+    },
+    {
+      "id": "VISION",
+      "name": "Vision",
+      "status": "inactive",
+      "repo_path": "/opt/avengers/vision",
+      "api_key_env": "AVENGER_VISION_API_KEY",
+      "income_ytd": 12000000,
+      "last_run": "2024-10-15T09:00:00Z"
+    },
+    {
+      "id": "SCARLET_WITCH",
+      "name": "Wanda Maximoff",
+      "status": "inactive",
+      "repo_path": "/opt/avengers/scarlet-witch",
+      "api_key_env": "AVENGER_SCARLET_WITCH_API_KEY",
+      "income_ytd": 18000000,
+      "last_run": "2024-10-15T09:30:00Z"
+    },
+    {
+      "id": "WAR_MACHINE",
+      "name": "James Rhodes",
+      "status": "inactive",
+      "repo_path": "/opt/avengers/war-machine",
+      "api_key_env": "AVENGER_WAR_MACHINE_API_KEY",
+      "income_ytd": 9500000,
+      "last_run": "2024-11-01T12:00:00Z"
+    },
+    {
+      "id": "FALCON",
+      "name": "Sam Wilson",
+      "status": "inactive",
+      "repo_path": "/opt/avengers/falcon",
+      "api_key_env": "AVENGER_FALCON_API_KEY",
+      "income_ytd": 7200000,
+      "last_run": "2024-11-01T12:30:00Z"
+    },
+    {
+      "id": "WINTER_SOLDIER",
+      "name": "Bucky Barnes",
+      "status": "inactive",
+      "repo_path": "/opt/avengers/winter-soldier",
+      "api_key_env": "AVENGER_WINTER_SOLDIER_API_KEY",
+      "income_ytd": 8100000,
+      "last_run": "2024-10-20T16:00:00Z"
+    },
+    {
+      "id": "SHURI",
+      "name": "Shuri",
+      "status": "inactive",
+      "repo_path": "/opt/avengers/shuri",
+      "api_key_env": "AVENGER_SHURI_API_KEY",
+      "income_ytd": 22000000,
+      "last_run": "2024-11-10T10:00:00Z"
+    },
+    {
+      "id": "OKOYE",
+      "name": "Okoye",
+      "status": "inactive",
+      "repo_path": "/opt/avengers/okoye",
+      "api_key_env": "AVENGER_OKOYE_API_KEY",
+      "income_ytd": 5500000,
+      "last_run": "2024-11-10T10:30:00Z"
+    },
+    {
+      "id": "M_BAKU",
+      "name": "M'Baku",
+      "status": "inactive",
+      "repo_path": "/opt/avengers/m-baku",
+      "api_key_env": "AVENGER_M_BAKU_API_KEY",
+      "income_ytd": 4800000,
+      "last_run": "2024-11-10T11:00:00Z"
+    }
+  ]
+}

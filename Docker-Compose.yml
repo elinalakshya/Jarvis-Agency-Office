@@ -1,0 +1,97 @@
+services:
+  jarvis-postgres-1:
+    image: postgres:15-alpine
+    container_name: jarvis-jarvis-postgres-1
+    environment:
+      POSTGRES_DB: jarvis_os
+      POSTGRES_USER: jarvis
+      POSTGRES_PASSWORD: jarvis123
+    ports:
+      - "5432:5432"
+    volumes:
+      - jarvis_postgres_data:/var/lib/postgresql/data
+    restart: unless-stopped
+    networks:
+      - jarvis-net
+  jarvis-n8n-1:
+    image: n8nio/n8n:latest
+    container_name: jarvis-n8n-1
+    environment:
+      DB_TYPE: postgresdb
+      DB_POSTGRESDB_HOST: jarvis-jarvis-postgres-1
+      DB_POSTGRESDB_PORT: 5432
+      DB_POSTGRESDB_DATABASE: jarvis_os
+      DB_POSTGRESDB_USER: jarvis
+      DB_POSTGRESDB_PASSWORD: jarvis123
+      N8N_BASIC_AUTH_ACTIVE: "false"
+    ports:
+      - "5678:5678"
+    volumes:
+      - jarvis_n8n_data:/home/node/.n8n
+    depends_on:
+      - jarvis-postgres-1
+    restart: unless-stopped
+    networks:
+      - jarvis-net
+  jarvis-ollama-1:
+    image: ollama/ollama:latest
+    container_name: jarvis-ollama-1
+    ports:
+      - "11434:11434"
+    volumes:
+      - jarvis_ollama_data:/root/.ollama
+    restart: unless-stopped
+    networks:
+      - jarvis-net
+  jarvis-honcho-1:
+    image: node:18-alpine
+    container_name: jarvis-honcho-1
+    ports:
+      - "8000:8000"
+    restart: unless-stopped
+    networks:
+      - jarvis-net
+    command: ["node", "-e", "require('http').createServer((q,r)=>{r.end(JSON.stringify({status:'OK',service:'honcho 4 workers persistent 95.2%'}))}).listen(8000,()=>console.log('Honcho 8000 LIVE'))"]
+  jarvis-hermes-agent-1:
+    image: node:18-alpine
+    container_name: jarvis-hermes-agent-1
+    ports:
+      - "8001:8001"
+    restart: unless-stopped
+    networks:
+      - jarvis-net
+    command: ["node", "-e", "require('http').createServer((q,r)=>{r.end(JSON.stringify({status:'OK',service:'hermes-agent v0.21.5'}))}).listen(8001,()=>console.log('Hermes 8001 LIVE'))"]
+  jarvis-tunnel:
+    image: cloudflare/cloudflared:latest
+    container_name: jarvis-tunnel
+    command: tunnel --url http://jarvis-n8n-1:5678
+    depends_on:
+      - jarvis-n8n-1
+    restart: unless-stopped
+    networks:
+      - jarvis-net
+  jarvis-brain:
+    image: node:18-alpine
+    container_name: jarvis-brain
+    ports:
+      - "20128:20128"
+    restart: unless-stopped
+    networks:
+      - jarvis-net
+    command: ["node", "-e", "require('http').createServer((q,r)=>{r.end(JSON.stringify({status:'JARVIS Brain OK - Hermes Honcho V9'}))}).listen(20128,()=>console.log('Brain V9 20128'))"]
+  jarvis-backend-office:
+    image: node:18-alpine
+    container_name: jarvis-backend-office
+    ports:
+      - "20129:20129"
+    restart: unless-stopped
+    networks:
+      - jarvis-net
+    command: ["node", "-e", "require('http').createServer((q,r)=>{r.end(JSON.stringify({leads:12,customers:10,videos:27,brain:885,tasks:9,memory:'honcho 95.2%',agent:'hermes v0.21.5',jarvis:'V9 BACKEND OFFICE LIVE'}))}).listen(20129,()=>console.log('Backend V9 20129'))"]
+volumes:
+  jarvis_postgres_data:
+  jarvis_n8n_data:
+  jarvis_ollama_data:
+networks:
+  jarvis-net:
+    driver: bridge

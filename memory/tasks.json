@@ -1,0 +1,38 @@
+{
+  "tasks": [
+    {
+      "id": "task_0001",
+      "title": "Find 50 plumbers",
+      "priority": "high",
+      "status": "done",
+      "role": "sales",
+      "due": "",
+      "notes": "",
+      "created": "2026-10-16T19:36:30",
+      "updated": "2026-10-17T19:56:39"
+    },
+    {
+      "id": "task_0002",
+      "title": "Test the system",
+      "priority": "medium",
+      "status": "pending",
+      "role": "",
+      "due": "",
+      "notes": "",
+      "created": "2026-10-17T19:55:43",
+      "updated": "2026-10-17T19:55:43"
+    },
+    {
+      "id": "task_0003",
+      "title": "Eat healthy - no junk food",
+      "priority": "medium",
+      "status": "pending",
+      "role": "",
+      "due": "",
+      "notes": "",
+      "created": "2026-10-19T18:33:42",
+      "updated": "2026-10-19T18:33:42"
+    }
+  ],
+  "next_id": 4
+}

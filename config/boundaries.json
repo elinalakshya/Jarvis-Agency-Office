@@ -1,0 +1,17 @@
+{
+  "allowed_write_paths": [
+    "D:\\business\\AI\\Github\\Jarvis Agency Office\\"
+  ],
+  "forbidden_paths": [
+    "C:\\Windows",
+    "C:\\Program Files",
+    "C:\\Users"
+  ],
+  "allow_delete": false,
+  "max_file_size_mb": 5,
+  "require_approval_for": [
+    "run_terminal_command",
+    "delete_file",
+    "modify_outside_allowed_paths"
+  ]
+}

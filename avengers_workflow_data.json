@@ -1,0 +1,62 @@
+
+{
+  "project": "Avengers Data Pipeline",
+  "data_format": "workflow_structured",
+  "source_workflow": {
+    "title": "MASTER WORKFLOW",
+    "nodes": [
+      "IRON MAN",
+      "CAPTAIN AMERICA",
+      "DOCTOR STRANGE",
+      "THOR",
+      "BLACK WIDOW"
+    ]
+  },
+  "avengers": [
+    {
+      "name": "IRON MAN",
+      "persona": "Tony Stark - The Builder",
+      "task": "Daily 5 Niche picking, Meta AI Image, STL conversion, and Upload to Cults3D, MyMiniFactory, Etsy, Gumroad, Printables",
+      "work_time_ist": "6:00 AM to 8:00 AM",
+      "payment_method": "PayPal"
+    },
+    {
+      "name": "CAPTAIN AMERICA",
+      "persona": "Steve Rogers - The Broadcaster",
+      "task": "YouTube Video Creation based on Sheet topic, Voice generation, MoviePy edit, and Auto Post with PayPal link",
+      "work_time_ist": "8:30 AM to 11:30 AM",
+      "payment_method": "PayPal"
+    },
+    {
+      "name": "DOCTOR STRANGE",
+      "persona": "The Traveler",
+      "task": "Airbnb Worldwide Lead generation (30 leads/day), Host Outreach for cinematic tours",
+      "work_time_ist": "12:00 PM to 3:00 PM (plus mini scans)",
+      "payment_method": "PayPal"
+    },
+    {
+      "name": "THOR",
+      "persona": "The Power - Main Money",
+      "task": "EXIM Commission business, Finding importers in niche markets using ImportYeti/Zauba",
+      "work_time_ist": "4:00 PM to 7:00 PM (MOST IMPORTANT)",
+      "payment_method": "PayPal"
+    },
+    {
+      "name": "BLACK WIDOW",
+      "persona": "Natasha - The Tracker",
+      "task": "Tax, Invoice Collection, and Intelligence, PayPal Income Tracking, Target Calculation",
+      "work_time_ist": "9:00 PM to 10:00 PM",
+      "payment_method": "PayPal"
+    }
+  ],
+  "monitoring": {
+    "director": "Nick Fury",
+    "heartbeat_interval_minutes": 30,
+    "system_checks_interval_minutes": 10
+  },
+  "targets": {
+    "2027_dec_31": "4Cr",
+    "2028_dec_31": "5Cr",
+    "2029_dec_31": "6Cr"
+  }
+}
